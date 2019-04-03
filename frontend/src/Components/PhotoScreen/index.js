@@ -13,7 +13,7 @@ class PhotoScreen extends Component {
         { this.props.loading ?
             <Loading />
           :
-            <div>
+            <span>
               <div className='galleryContainer'>
                 <ImageGallery
                   showThumbnails={false}
@@ -27,7 +27,7 @@ class PhotoScreen extends Component {
                   New Search
                 </Button>
               </div>
-            </div>
+            </span>
         }
       </div>
     );
