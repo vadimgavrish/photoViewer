@@ -1,12 +1,11 @@
-.stepTwo {
+.selectScreen {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.stepTwoTitle {
+.selectScreenTitle {
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -15,13 +14,13 @@
   text-align: center;
 }
 
-.stepTwoTitle h2 {
+.selectScreenTitle h2 {
   font-size: 60px;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.65);
 }
 
-.stepTwoBody {
+.selectScreenBody {
   height: 500px;
 }
 

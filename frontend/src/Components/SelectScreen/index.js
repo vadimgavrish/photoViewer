@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
-import './StepOne.css';
+import './SelectScreen.css';
 
 import Select from 'react-select';
 import Button from '../Button/index';
 import Loading from '../Loading/index';
 
-class StepOne extends Component {
+class SelectScreen extends Component {
   constructor(props) {
     super(props);
 
@@ -25,12 +25,16 @@ class StepOne extends Component {
   }
 
   attemptSubmit() {
-    let user = this.state.selectedOption;
+    let selectedOption = this.state.selectedOption;
 
-    if (user) {
-      this.props.submit(2, this.state.selectedOption);
+    if (selectedOption) {
+      this.props.submit(this.props.activeStep, this.state.selectedOption);
     } else {
-      swal("Oops!", "Please select a user to continue", "info");
+      if (this.props.activeStep === 2) {
+        swal("Oops!", "Please select a user to continue", "info");
+      } else if (this.props.activeStep === 3) {
+        swal("Oops!", "Please select an album to continue", "info");
+      };
     };
   }
 
@@ -40,11 +44,16 @@ class StepOne extends Component {
         { this.props.loading ?
             <Loading />
           :
-          <div className="stepOne">
-            <div className="stepOneTitle">
-              <h2>Select a user</h2>
+          <div className="selectScreen">
+            <div className="selectScreenTitle">
+              { this.props.activeStep === 2 &&
+                <h2>Select a user</h2>
+              }
+              { this.props.activeStep === 3 &&
+                <h2>Now select an album</h2>
+              }
             </div>
-            <div className="stepOneBody">
+            <div className="selectScreenBody">
               <Select
                 className="select"
                 options={this.props.options}
@@ -64,4 +73,4 @@ class StepOne extends Component {
   }
 }
 
-export default StepOne;
+export default SelectScreen;

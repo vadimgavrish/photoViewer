@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import StepOne from './Components/StepOne/index';
-import StepTwo from './Components/StepTwo/index';
+import SelectScreen from './Components/SelectScreen/index';
 
 class App extends Component {
   constructor(props) {
@@ -137,14 +136,16 @@ class App extends Component {
          >PHOTO VIEWER</h1>
         <div className="MainContent">
           { this.state.activeStep === 1 &&
-            <StepOne
+            <SelectScreen
+              activeStep={2}
               options={this.state.users}
               loading={this.state.loading}
               submit={this.setActiveStep}
             />
           }
           { this.state.activeStep === 2 &&
-            <StepTwo
+            <SelectScreen
+              activeStep={3}
               options={this.state.albums}
               submit={this.setActiveStep}
               loading={this.state.loading}
