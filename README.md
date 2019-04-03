@@ -5,9 +5,7 @@
 ## Installation & Start Up
 `git clone https://github.com/vadimgavrish/tech-challenge.git photoViewer`
 
-`cd photoViewer`
-
-`cd frontend`
+`cd photoViewer/frontend`
 
 `npm install`
 
