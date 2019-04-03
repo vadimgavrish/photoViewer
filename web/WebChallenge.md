@@ -15,12 +15,12 @@
 - [ ] SOLID principles
 - [ ] Code is understandable and maintainable
 
-Suggestion: 
+Suggestion:
 - Input field with a drop-down user selection.
 - /users to fetch the users
 - /albums to fetch the albums
 - /photos associated with albums
 
 
-Be creative for UI design 
+Be creative for UI design
 
