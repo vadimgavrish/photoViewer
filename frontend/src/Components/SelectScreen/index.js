@@ -18,12 +18,14 @@ class SelectScreen extends Component {
     this.attemptSubmit = this.attemptSubmit.bind(this);
   }
 
+  // Handle CHange of selector
   handleChange(selectedOption) {
     this.setState({
       selectedOption
     });
   }
 
+  // Attempt to submit the selector choice
   attemptSubmit() {
     let selectedOption = this.state.selectedOption;
 
