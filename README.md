@@ -1,4 +1,4 @@
-# Mavennet Technical Challenge
+# Photo Viewer App
 
 ## React App to view images from a user's selected album. Fetches from jsonplaceholder API.
 
