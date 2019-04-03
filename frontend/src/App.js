@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import SelectScreen from './Components/SelectScreen/index';
+import PhotoScreen from './Components/PhotoScreen/index';
 
 class App extends Component {
   constructor(props) {
@@ -87,7 +88,13 @@ class App extends Component {
 
         res.forEach(picture => {
           if (Number(picture.albumId) === Number(albumId)) {
-            albumPhotos.push(picture);
+            const obj = {
+              original: picture.url,
+              thumbnail: picture.thumbnailUrl,
+              description: picture.title,
+            };
+
+            albumPhotos.push(obj);
           };
         });
 
@@ -95,8 +102,6 @@ class App extends Component {
           albumPhotos,
           loading: false,
         });
-
-        console.log(albumPhotos);
       })
       .catch(err => console.error(err));
   }
@@ -152,9 +157,11 @@ class App extends Component {
             />
           }
           { this.state.activeStep === 3 &&
-            <div>
-
-            </div>
+            <PhotoScreen
+              loading={this.state.loading}
+              photos={this.state.albumPhotos}
+              refreshPage={this.refreshPage}
+            />
           }
         </div>
       </div>

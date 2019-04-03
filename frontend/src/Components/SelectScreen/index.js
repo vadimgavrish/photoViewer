@@ -63,7 +63,12 @@ class SelectScreen extends Component {
               <Button
                 onClick={this.attemptSubmit}
               >
-                Next
+                { this.props.activeStep === 2 &&
+                  'Next'
+                }
+                { this.props.activeStep === 3 &&
+                  'View Photos'
+                }
               </Button>
             </div>
           </div>
