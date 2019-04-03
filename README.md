@@ -3,7 +3,7 @@
 ## React App to view images from a user's selected album. Fetches from jsonplaceholder API.
 
 ## Installation & Start Up
-`git clone https://github.com/vadimgavrish/tech-challenge.git photoViewer`
+`git clone https://github.com/vadimgavrish/photoViewer.git photoViewer`
 
 `cd photoViewer/frontend`
 
